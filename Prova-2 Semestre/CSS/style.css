@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #83f5ef;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+}
+
+form {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+form button {
+    background-color: #0979f0;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #1f87f7;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.actions button {
+    background-color: #ecb306;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.actions button:hover {
+    background-color: #ebb209;
+}
+
+.actions button.excluir {
+    background-color: #f3162c;
+}
+
+.actions button.excluir:hover {
+    background-color: #be1526;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    form input[type="text"],
+    form input[type="number"],
+    form select {
+        width: 100%;
+    }
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+        font-weight: bold;
+        text-align: left;
+    }
+    td.actions {
+        text-align: center;
+        padding-left: 6px;
+    }
+}
