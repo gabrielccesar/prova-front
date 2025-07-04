@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento para Pet Grooming</title>
+    <link rel="stylesheet" href="css/tyle.css">
+</head>
+<body>
+  <h2>Calcular Orçamento - Pet Shop</h2>
+
+  <label for="tutor">Tutor:</label>
+  <input type="text" id="tutor"/>
+
+  <label for="pet">Pet:</label>
+  <input type="text" id="pet" />
+
+  <label for="porte">Porte:</label>
+  <select id="porte">
+    <option value="Pequeno">Pequeno</option>
+    <option value="Médio" selected>Médio</option>
+    <option value="Grande">Grande</option>
+  </select>
+
+  <label for="servico">Serviço:</label>
+  <select id="servico">
+    <option value="Banho">Banho</option>
+    <option value="Tosa">Tosa</option>
+    <option value="Banho e Tosa">Banho e Tosa</option>
+  </select>
+
+  <label>
+    <input type="checkbox" id="hidratacao" />
+    Hidratação adicional (+R$25)
+  </label>
+
+  <button onclick="calcular()">Calcular Orçamento</button>
+
+  <h3>Orçamento:</h3>
+  <pre id="resultado"></pre>
+  <script src="script/sript.js"></script>
+</body>
+</html>
